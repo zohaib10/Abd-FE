@@ -7,6 +7,7 @@ const StyledCartButton = styled.div`
   font-size: 14px;
   svg {
     margin-right: 10px;
+    fill: #fff;
   }
 `;
 
