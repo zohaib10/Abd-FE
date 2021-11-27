@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-type ButtonVariation = "primary" | "link" | "menu_item";
+type ButtonVariation = "primary" | "link" | "menu_item" | "clear";
 type ButtonSize = "sm" | "md";
 
 const smallButton = css`
@@ -14,14 +14,18 @@ const menuItem = css`
   background: inherit;
 `;
 
+const clear = css`
+  background: inherit;
+`;
+
 const ButtonStyled = styled.button<{
   variation: ButtonVariation;
   size: ButtonSize;
 }>`
-  max-width: 164px;
+  width: 100%;
   min-height: 46px;
   color: #fff;
-  padding: 8px 16px;
+  padding: 0;
   background: #f25c54;
   font-size: 16px;
   border: none;
@@ -34,6 +38,7 @@ const ButtonStyled = styled.button<{
 
   ${(props) => props.size === "sm" && smallButton}
   ${(props) => props.variation === "menu_item" && menuItem}
+  ${(props) => props.variation === "clear" && clear}
 `;
 
 type ButtonProps = {

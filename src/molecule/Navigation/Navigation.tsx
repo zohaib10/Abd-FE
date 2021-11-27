@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 // Molecule
-import { CartButton } from "molecule/CartButton";
+import { Right } from "icons";
 
 // Atom
 import { Button } from "atom/Button";
@@ -22,25 +22,23 @@ export const Navigation = () => {
   const { screenMatches: isDesktop } = useMedia("(min-width: 768px)");
   const [expandMobile, setExpandMobile] = useState(false);
 
-  const handleHamburgerClick = () => setExpandMobile(!expandMobile);
-
   return (
     <NavigationContainer>
-      {isDesktop ? (
-        <Desktop>
-          <Button variation="menu_item">Home</Button>
-          <Button variation="menu_item">
-            <>
-              Men <Down />
-            </>
-          </Button>
-        </Desktop>
-      ) : (
-        <Button onClick={handleHamburgerClick} variation="menu_item">
-          <Hamburger />
-        </Button>
-      )}
-      <CartButton count={0} />
+      <Button variation="menu_item">
+        <>
+          <h4>Home</h4> <Right />
+        </>
+      </Button>
+      <Button variation="menu_item">
+        <>
+          <h4>Mens</h4> <Right />
+        </>
+      </Button>
+      <Button variation="menu_item">
+        <>
+          <h4>Womens</h4> <Right />
+        </>
+      </Button>
     </NavigationContainer>
   );
 };
