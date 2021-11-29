@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <h1>Rooh</h1>
-      <CartButton count={1} />
+      <CartButton count={4} />
     </HeaderContainer>
   );
 };

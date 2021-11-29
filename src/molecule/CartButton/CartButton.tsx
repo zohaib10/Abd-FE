@@ -1,9 +1,11 @@
 import styled from "styled-components";
 import { Basket } from "icons";
+import { Button } from "atom/Button";
 
-const StyledCartButton = styled.div`
+const StyledCartButton = styled(Button)`
   display: flex;
   justify-content: flex-end;
+  width: 40px;
   font-size: 14px;
   position: relative;
   svg {
@@ -11,8 +13,8 @@ const StyledCartButton = styled.div`
   }
   span {
     position: absolute;
-    top: 14px;
-    right: 6px;
+    top: 12px;
+    right: 4px;
     font-size: 8px;
     border: 1px solid red;
     border-radius: 50%;
@@ -28,10 +30,12 @@ type CartButtonProps = {
 
 export const CartButton = ({ count }: CartButtonProps) => {
   return (
-    <StyledCartButton>
-      {count && <span>{count}</span>}
-      <Basket />
-      {/* <p>Cart ({count})</p> */}
+    <StyledCartButton variation="clear">
+      <>
+        {count && <span>{count}</span>}
+        <Basket />
+        {/* <p>Cart ({count})</p> */}
+      </>
     </StyledCartButton>
   );
 };

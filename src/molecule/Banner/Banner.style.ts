@@ -9,6 +9,7 @@ export const BannerContainer = styled.section`
   padding: 0 16px;
   font-size: 14px;
   color: #fff;
+  height: 44px;
 
   button {
     font-size: 14px;

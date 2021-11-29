@@ -4,6 +4,7 @@ export const NavigationContainer = styled.section`
   padding: 18px;
   display: flex;
   flex-grow: 1;
+  min-width: 250px;
   height: 100%;
   flex-direction: column;
   justify-content: space-between;
@@ -27,6 +28,15 @@ export const NavigationContainer = styled.section`
 export const Desktop = styled.div`
   display: flex;
   button {
-    margin-right: 16px;
+    margin-right: 18px;
+  }
+`;
+
+export const ChildLinks = styled.section`
+  width: 100%;
+  button:not(:first-child) {
+    h4 {
+      padding-left: 12px;
+    }
   }
 `;

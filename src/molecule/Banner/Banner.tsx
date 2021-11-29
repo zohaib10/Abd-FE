@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "atom/Button";
 import { BannerContainer, Left, BannerInput } from "./Banner.style";
 import { Search } from "icons";
-import { Input } from "atom/Input";
 
 export const Banner = () => {
   const [isSearching, setIsSearching] = useState(false);

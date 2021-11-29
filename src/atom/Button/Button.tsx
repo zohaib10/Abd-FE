@@ -23,7 +23,7 @@ const ButtonStyled = styled.button<{
   size: ButtonSize;
 }>`
   width: 100%;
-  min-height: 46px;
+
   color: #fff;
   padding: 0;
   background: #f25c54;
