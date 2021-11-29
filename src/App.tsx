@@ -1,4 +1,5 @@
 import { Landing } from "components/Landing";
+import { Banner } from "molecule/Banner";
 import { Carousel } from "molecule/Carousel";
 
 import { CartButton } from "molecule/CartButton";
@@ -17,17 +18,30 @@ const Row = styled.section`
   }
 `;
 
-function App() {
+const AppContainer = styled.section`
+  @media (min-width: 768px) {
+    padding: 0 30px;
+  }
+`;
+
+function Shell() {
   return (
-    <div>
+    <AppContainer>
       <GlobalStyle />
       <Header />
       <Row>
         <Navigation />
         <Carousel />
       </Row>
-    </div>
+    </AppContainer>
   );
 }
+
+const App = () => (
+  <div>
+    <Banner />
+    <Shell />
+  </div>
+);
 
 export default App;

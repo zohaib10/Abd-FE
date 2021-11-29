@@ -29,5 +29,5 @@ export const RightButton = styled(Button)`
 
 export const Image = styled.img`
   height: 600px;
-  //   width: 100%;
+  width: 100%;
 `;
